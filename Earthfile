@@ -12,8 +12,7 @@ builder:
     ARG APPLICATION
     ARG IMAGE_TAG
 
-    RUN pwd
-    COPY . .
+    COPY /builds/credify.one/services/$APPLICATION .
 
     RUN ls -la
 

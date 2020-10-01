@@ -12,11 +12,7 @@ builder:
     ARG APPLICATION
     ARG IMAGE_TAG
 
-    COPY /builds/credify.one/services/$APPLICATION .
-
-    RUN ls -la
-
-    RUN pwd
+    COPY . .
 
     RUN cd vendor/gitlab.com/credify.one/services/common && ./install.sh
 

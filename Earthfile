@@ -14,6 +14,8 @@ builder:
 
     COPY . /credify
 
+    RUN ls -la
+
     RUN cd vendor/gitlab.com/credify.one/services/common && ./install.sh
 
     RUN --mount=type=cache,target=/root/.cache/go-build go build

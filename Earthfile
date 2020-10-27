@@ -11,6 +11,8 @@ builder:
     ARG DOCKER_REGISTRY
     ARG APPLICATION
     ARG IMAGE_TAG
+    
+    RUN apk add ca-certificates libc-dev gcc
 
     COPY . .
 
